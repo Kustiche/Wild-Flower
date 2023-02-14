@@ -1,1 +1,172 @@
+.hero
+  padding-top: 45px
+  padding-bottom: 25px
 
+  &__wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__representation
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-bottom: 80px
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    max-width: 570px
+    width: 100%
+    position: relative
+
+  &__decoration
+    position: absolute
+    width: 356px
+    height: 210px
+    top: -100px
+    left: -75px
+
+  &__title
+    margin: 0
+    margin-bottom: 30px
+    font-weight: 400
+    font-size: 59px
+    line-height: 66px
+
+  &__text
+    margin: 0
+    margin-bottom: 65px
+    font-family: 'Lato-Light', sans-serif
+    font-weight: 300
+    font-size: 24px
+    line-height: 34px
+
+  &__inner-pictures
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+  &__inner-img
+    margin-right: 35px
+    max-width: 337px
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      max-width: 318px
+      width: 100%
+      max-height: 434px
+      height: 100%
+      border: 2px solid $desert-storm
+      border-radius: 410px 410px 0px 0px
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  &__img
+    width: 100%
+    height: auto
+    border-radius: 410px 410px 0px 0px
+
+  &__icons
+    display: flex
+    flex-direction: column
+
+  &__inner-icon
+    position: relative
+    margin-bottom: 30px
+    &::after
+      position: absolute
+      content: ""
+      width: 40px
+      height: 40px
+      border: 1px solid $akaroa
+      border-radius: 50%
+      top: -50%
+      left: -50%
+      transform: translate(5%, 10%)
+    &:last-child
+      margin-bottom: 8px
+
+  &__icon
+    width: 23px
+    height: 23px
+
+  &__steps
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+  &__caption
+    margin: 0
+    margin-bottom: 65px
+    font-weight: 400
+    font-size: 40px
+    line-height: 45px
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      width: 69px
+      border-top: 2px solid $akaroa
+      top: -8px
+      left: 0
+
+  &__inner-cards
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    max-width: 1110px
+    width: 100%
+    gap: 25px 50px
+
+  &__card
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    max-width: 175px
+    min-height: 260px
+    position: relative
+    &::after
+      position: absolute
+      content: url(../../img/svg/steps-decoration-upper-arc.svg)
+      width: 146px
+      height: 33px
+      top: -13px
+      left: 80px
+    &:nth-child(even)
+      &::after
+        content: url(../../img/svg/steps-decoration-lower-arc.svg)
+        top: 52px
+    &:last-child
+      &::after
+        display: none
+
+  &__inner-steps-icon
+    margin-left: 10px
+    margin-bottom: 60px
+    width: 60px
+    height: 60px
+
+  &__steps-icon
+    width: 100%
+    height: auto
+
+  &__heading
+    margin: 0
+    margin-bottom: 25px
+    font-weight: 400
+    font-size: 23px
+    line-height: 20px
+
+  &__descr
+    margin: 0
+    font-family: "Lato-Light", sans-serif
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
