@@ -5,13 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>WILD FLOWER</title>
-		<link type="image/svg" href="favicons/favicon.svg" rel="icon" />
+		<link type="image/x-icon" href="favicons/favicon.png" rel="shortcut icon" />
+		k
 		<link href="css/style.min.css" rel="stylesheet" />
 	</head>
 
 	<body>
-		<header class="header">
-	<div class="container">
+		<div class="site-container">
+			<header class="header">
+	<div class="container header__container">
 		<div class="header__wrap">
 			<button class="burger btn-reset">
 				<span class="burger__line"></span>
@@ -63,22 +65,169 @@
 					<svg class="contact__icon">
 						<use href="img/sprite.svg#header-phone"></use>
 					</svg>
-					<span class="contact__descr">+7 (960) 210-22-33</span>
+					<span class="contact__number">+7 (960) 210-22-33</span>
 				</a>
 			</div>
 		</div>
 	</div>
 </header>
 
-		<main class="main"><section class="hero">
-	<div class="container"></div>
+			<main class="main"><section class="hero">
+	<div class="container">
+		<div class="hero__wrap">
+			<div class="hero__representation">
+				<div class="hero__content">
+					<svg class="hero__decoration">
+						<use href="img/sprite.svg#decoration-content"></use>
+					</svg>
+					<h1 class="hero__title">Very Hards</h1>
+					<p class="hero__text">
+						Каждый день мы&nbsp;создаем новую композицию из&nbsp;свежих,
+						сезонных цветов
+					</p>
+					<a class="hero__button button link-reset modal-link" href="#modal"
+						>Заказать сейчас</a
+					>
+				</div>
+				<div class="hero__inner-pictures">
+					<div class="hero__inner-img">
+						<img
+							class="hero__img"
+							src="../../img/hero/girl-with-flowers.jpg"
+							alt="Девушка с цветами"
+						/>
+					</div>
+					<div class="hero__icons">
+						<a class="hero__inner-icon" href="#">
+							<svg class="hero__icon">
+								<use href="img/sprite.svg#twitter"></use>
+							</svg>
+						</a>
+						<a class="hero__inner-icon" href="#">
+							<svg class="hero__icon">
+								<use href="img/sprite.svg#pinterest"></use>
+							</svg>
+						</a>
+						<a class="hero__inner-icon" href="#">
+							<svg class="hero__icon">
+								<use href="img/sprite.svg#youtube"></use>
+							</svg>
+						</a>
+						<a class="hero__inner-icon" href="#">
+							<svg class="hero__icon">
+								<use href="img/sprite.svg#facebook"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="hero__steps">
+				<h2 class="hero__caption">5 шагов к&nbsp;авторскому букету</h2>
+				<div class="hero__inner-cards">
+					<div class="hero__card">
+						<div class="hero__inner-steps-icon">
+							<img
+								class="hero__steps-icon"
+								src="../../img/hero/order.png"
+								alt="Заказ"
+							/>
+						</div>
+						<h3 class="hero__heading">Заказ</h3>
+						<p class="hero__descr">Выберите букет и&nbsp;оформите заказ</p>
+					</div>
+					<div class="hero__card">
+						<div class="hero__inner-steps-icon">
+							<img
+								class="hero__steps-icon"
+								src="../../img/hero/details.png"
+								alt=" Детали"
+							/>
+						</div>
+						<h3 class="hero__heading">Детали</h3>
+						<p class="hero__descr">
+							Мы&nbsp;вам перезвоним в&nbsp;течение 10&nbsp;минут и&nbsp;уточним
+							детали
+						</p>
+					</div>
+					<div class="hero__card">
+						<div class="hero__inner-steps-icon">
+							<img
+								class="hero__steps-icon"
+								src="../../img/hero/payment.png"
+								alt="Оплата"
+							/>
+						</div>
+						<h3 class="hero__heading">Оплата</h3>
+						<p class="hero__descr">Оплатите онлайн или при получении</p>
+					</div>
+					<div class="hero__card">
+						<div class="hero__inner-steps-icon">
+							<img
+								class="hero__steps-icon"
+								src="../../img/hero/assembly.png"
+								alt="Сборка и упаковка"
+							/>
+						</div>
+						<h3 class="hero__heading">Сборка и&nbsp;упаковка</h3>
+						<p class="hero__descr">
+							Соберем букет с&nbsp;учетом ваших пожеланий и&nbsp;упакуем для
+							доставки
+						</p>
+					</div>
+					<div class="hero__card">
+						<div class="hero__inner-steps-icon">
+							<img
+								class="hero__steps-icon"
+								src="../../img/hero/delivery.png"
+								alt="Доставка"
+							/>
+						</div>
+						<h3 class="hero__heading">Доставка</h3>
+						<p class="hero__descr">
+							Курьер позвонит за&nbsp;час и&nbsp;доставит букет во&nbsp;время
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 </main>
-		<footer class="footer">
+			<footer class="footer">
   <div class="container">
 
   </div>
-</footer>
+</footer> <div class="modal" id="modal">
+	<div class="modal__body">
+		<div class="modal__content">
+			<a class="modal__close close-modal" href="#header"></a>
+			<div class="modal__title">Обратный звонок</div>
+			<form class="form" action="utf-8">
+				<label class="form__heading" for="login">*Имя</label>
+				<input
+					class="form__login input"
+					id="login"
+					type="text"
+					placeholder="Николай"
+					required
+				/>
+				<label class="form__heading" for="number">*Телефон</label>
+				<input class="form__number input" id="number" type="tel" required />
+				<p class="form__text">
+					*Нажимия кнопку &laquo;Оставить заявку&raquo; я&nbsp;даю согласие
+					на&nbsp;обработку данных
+				</p>
+				<input
+					class="form__button button"
+					type="submit"
+					value="Отправить заявку"
+				/>
+			</form>
+		</div>
+	</div>
+</div>
+
+		</div>
 		<script src="js/scripts.min.js"></script>
 	</body>
 </html>
