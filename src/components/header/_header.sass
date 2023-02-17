@@ -17,6 +17,7 @@ body
     display: flex
     justify-content: space-between
     align-items: center
+    gap: 20px
 
   &__inner
     display: flex
@@ -24,10 +25,13 @@ body
     align-items: center
     max-width: 805px
     width: 100%
+    @media screen and ( max-width: 940px )
+      max-width: 165px
 
 .logo
   position: relative
-  width: 117px
+  max-width: 117px
+  width: 100%
   height: 79px
   z-index: 5
 
@@ -87,6 +91,8 @@ body.touch
     &::after
       width: 100%
       right: 0
+  @media screen and ( max-width: 576px )
+    max-width: 21px
 
   &__icon
     width: 20px
@@ -106,8 +112,19 @@ body.touch
       left: 50%
       transition: width .4s
       transform: translateX(-50%)
+    @media screen and ( max-width: 576px )
+      display: none
 
 @media screen and ( min-width: 940px )
+
+  .header
+
+    &__icons
+      display: none
+
+  .nav--mobile
+    display: none
+
   .menu
     display: flex
     align-items: center
@@ -118,21 +135,60 @@ body.touch
       &:last-child
         margin-right: 0
 
+  .contact
+    &--mobile
+      display: none
+
 @media screen and ( max-width: 940px )
+  .header
+
+    &__inner
+      display: none
+
+    &__icons
+      display: flex
+      justify-content: space-between
+      align-items: center
+      max-width: 180px
+      width: 100%
+
+    &__inner-icon
+      margin-bottom: 0
+
+    &__icon
+      fill: #F6F6F5
+
+  .logo
+    margin-left: auto
+    margin-right: auto
+    @media screen and ( max-width: 576px )
+      max-width: 80px
+      max-height: 50px
+
+  .contact
+    &--pc
+      display: none
+    &--mobile
+      position: absolute
+      right: 15px
+    &.active
+      display: none
+
   .burger
     z-index: 5
     display: block
     width: 30px
     height: 18px
-    position: relative
+    position: absolute
     cursor: pointer
     &::before, &::after, &__line
       position: absolute
-      left: 0
-      border-top: 1px solid $white
+      left: 30px
+      border-top: 2px solid $teak
+      border-radius: 50%
       width: 100%
       transition: all .4s ease 0s
-      background-color: $white
+      background-color: $teak
     &::before, &::after
       content: ""
     &::before
@@ -142,8 +198,16 @@ body.touch
     &__line
       top: 50%
       transform: scale(1) translate(0, -50%)
+    @media screen and ( max-width: 576px )
+      width: 21px
+      height: 10px
 
     &.active
+      top: 25px
+      right: 45px
+      transform: translate(-50%, 50%)
+      &::before, &::after, &__line
+        border-top: 2px solid $desert-storm
       &::before
         top: 50%
         transform: rotate(-45deg) translate(0, -50%)
@@ -155,34 +219,32 @@ body.touch
 
   .nav
     position: fixed
-    top: 0
-    left: -100%
+    top: -100%
+    left: 0
     width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0, 0.9)
-    padding: 135px 30px 30px 30px
-    transition: left .4s ease 0s
+    background-color: $akaroa
+    padding: 135px 30px 15px 30px
+    transition: top .4s ease 0s
     overflow: auto
-    &::before
-      content: ""
-      position: fixed
-      top: 0
-      left: 0
-      width: 100%
-      height: 115px
-      background-color: $mexican-red
-      z-index: 2
+    &--pc
+      display: none
+    &--mobile
+      display: inline-block
     &.active
-      left: 0
+      top: 0
+      color: $desert-storm
 
   .menu
-
+    display: flex
+    flex-direction: column
+    align-items: center
     &__item
       flex-wrap: wrap
-      margin-bottom: 30px
-      font-size: 24px
-      &:last-child
-        margin-bottom: 0
+      margin-bottom: 15px
+      font-size: 16px
+      line-height: 18px
+      &:nth-last-child(2)
+        margin-bottom: 50px
       &:hover
         &::after
           width: 0

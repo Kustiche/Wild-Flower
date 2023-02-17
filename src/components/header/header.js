@@ -30,11 +30,13 @@ const isMobile = {
 
 const menuBurger = document.querySelector('.burger');
 const menuNav = document.querySelector('.nav');
+const menuContact = document.querySelector('.contact--mobile');
 if (menuBurger) {
   menuBurger.addEventListener('click', function(e) {
     document.body.classList.toggle('lock')
     menuBurger.classList.toggle('active');
     menuNav.classList.toggle('active');
+    menuContact.classList.toggle('active');
   });
 }
 
